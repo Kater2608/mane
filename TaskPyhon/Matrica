@@ -1,27 +1,40 @@
-from random import randint
-s=[]
-l=[]
-A=4
-B=3
-a=[]
-for i in range(A):
-    b=[]
-    for i in range(B):
-        b.append(randint(-100,100))
-    a.append(b)
-for symbol in a:
-    print(*(i if i >=0 else '-' for i in symbol))
-for i in range(len(a)):
-    stroka=0
-    for j in range(len(a[0])):
-        stroka+=a[i][j]
-    s.append(stroka)
-for i in range(len(a[0])):
-    suma=0
-    for j in range(len(a)):
-        suma=a[j][i]
-    l.append(suma)
-print(s)
-print(l)
+# from random import randint
+# s=[]
+# l=[]
+# A=4
+# B=3
+# a=[]
+# for i in range(A):
+#     b=[]
+#     for i in range(B):
+#         b.append(randint(-100,100))
+#     a.append(b)
+# for symbol in a:
+#     print(*(i if i >=0 else '-' for i in symbol))
+# for i in range(len(a)):
+#     stroka=0
+#     for j in range(len(a[0])):
+#         stroka+=a[i][j]
+#     s.append(stroka)
+# for i in range(len(a[0])):
+#     suma=0
+#     for j in range(len(a)):
+#         suma=a[j][i]
+#     l.append(suma)
+# print(s)
+# print(l)
+def main():
+    stop="exit"
+    c=set()
+    while True:
+        a=input('Введите слово или "exit"для выхода')
+        if a.lower==stop:
+            print('Конец')
+            break
+        if a in c:
+            print('Уже есть')
+        else:
+            c.add(a)
+            print(f"Слово'{a}'добавлено.")
 
 
